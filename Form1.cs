@@ -13,7 +13,7 @@ namespace Login
     public partial class Form1 : Form
     {
         Controllers.AuthController _authController = new Controllers.AuthController();
-        private int intentos = 0; // <-- Aquí agregas la variable
+        private int intentos = 0; // variable para intentos
 
         public Form1()
         {
@@ -37,7 +37,7 @@ namespace Login
             else
             {
                 intentos++; // Aumenta el contador de intentos
-                MessageBox.Show($"Acceso denegado. Intento {intentos} de 3.");
+                MessageBox.Show($"Acceso denegado. Intento {intentos} de 3."); //tenemos 3 intentos antes de que el formulario se cierre automáticamente
                 lblMensaje.Text = res;
                 lblMensaje.Visible = true;
 
